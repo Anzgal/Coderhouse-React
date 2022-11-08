@@ -6,86 +6,14 @@ import {
   QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const navigation = {
-  categories: [
-    {
-      name: "Women",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in black and bone.",
-        },
-        {
-          name: "Basic Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
-        },
-        {
-          name: "Accessories",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-03.jpg",
-          imageAlt:
-            "Model wearing minimalist watch with black wristband and white watch face.",
-        },
-        {
-          name: "Carry",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg",
-          imageAlt:
-            "Model opening tan leather long wallet with credit card pockets and cash pouch.",
-        },
-      ],
-    },
-    {
-      name: "Men",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg",
-          imageAlt:
-            "Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.",
-        },
-        {
-          name: "Basic Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg",
-          imageAlt: "Model wearing light heather gray t-shirt.",
-        },
-        {
-          name: "Accessories",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-03.jpg",
-          imageAlt:
-            "Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.",
-        },
-        {
-          name: "Carry",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-04.jpg",
-          imageAlt:
-            "Model putting folded cash into slim card holder olive leather wallet with hand stitching.",
-        },
-      ],
-    },
-  ],
+  categories: [],
   pages: [
-    { name: "Company", href: "#" },
-    { name: "Stores", href: "#" },
+    { name: "Smartphones", href: "/category/smartphones" },
+    { name: "Laptops", href: "/category/laptops" },
+    { name: "Fragancias", href: "/category/fragrances" },
   ],
 };
 
@@ -106,14 +34,14 @@ function NavBar() {
               <div className="flex h-16 items-center justify-between">
                 {/* Logo (lg+) */}
                 <div className="hidden lg:flex lg:flex-1 lg:items-center">
-                  <a href="#">
+                  <Link to="/">
                     <span className="sr-only">Your Company</span>
                     <img
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/mark.svg?color=white"
                       alt=""
                     />
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="hidden h-full lg:flex">
@@ -197,13 +125,13 @@ function NavBar() {
                       ))}
 
                       {navigation.pages.map((page) => (
-                        <a
+                        <Link
                           key={page.name}
-                          href={page.href}
+                          to={page.href}
                           className="flex items-center text-sm font-medium text-white"
                         >
                           {page.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </Popover.Group>
@@ -241,28 +169,9 @@ function NavBar() {
                 </a>
 
                 <div className="flex flex-1 items-center justify-end">
-                  <a
-                    href="#"
-                    className="hidden text-sm font-medium text-white lg:block"
-                  >
-                    Search
-                  </a>
+ 
 
                   <div className="flex items-center lg:ml-8">
-                    {/* Help */}
-                    <a href="#" className="p-2 text-white lg:hidden">
-                      <span className="sr-only">Help</span>
-                      <QuestionMarkCircleIcon
-                        className="h-6 w-6"
-                        aria-hidden="true"
-                      />
-                    </a>
-                    <a
-                      href="#"
-                      className="hidden text-sm font-medium text-white lg:block"
-                    >
-                      Help
-                    </a>
 
                     <CartWidget/>
                   </div>
