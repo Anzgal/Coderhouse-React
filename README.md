@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Proyecto Coderhouse React
+
+Este es el proyecto final para el curso de React en Coderhouse. El proyecto consiste en un simulador de una tienda en línea.
+
+[Link al proyecto desplegado en Vercel](https://vercel.com/anzgal/coderhouse-react)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
