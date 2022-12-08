@@ -2,7 +2,9 @@
 
 Este es el proyecto final para el curso de React en Coderhouse. El proyecto consiste en un simulador de una tienda en línea.
 
-[Link al proyecto desplegado en Vercel](https://vercel.com/anzgal/coderhouse-react)
+[Link al proyecto desplegado en Vercel](https://coderhouse-react-iota.vercel.app/)
+
+![Screenshot del proyecto](https://github.com/Anzgal/Coderhouse-React/blob/main/images/ProjectScreenshot.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
